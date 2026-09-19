@@ -571,6 +571,17 @@ function buildCaseStudy(card) {
       </div>`);
     }
 
+    const demos = videosFor(d);
+    if (demos.length) {
+      parts.push(`
+      <div class="cs-demos">
+        <h2 class="col-title"><i class="ri-play-circle-line" aria-hidden="true"></i>Project Demo</h2>
+        <div class="grid-cards grid-cards--demos">
+          ${demos.map((g) => videoCard(g, rel)).join('')}
+        </div>
+      </div>`);
+    }
+
     parts.push(`
       <div class="card cs-block" style="margin-bottom:1.5rem;">
         <h3><i class="ri-stack-line" aria-hidden="true"></i>Technology Stack</h3>
@@ -610,11 +621,54 @@ function buildCaseStudy(card) {
       </div>
     </section>`);
 
-  parts.push('</main>', footer(rel, false), foot(rel));
+  // The lightbox only needs to exist when the page has something to play.
+  parts.push('</main>');
+  if (videosFor(d).length) parts.push(lightboxMarkup());
+  parts.push(footer(rel, false), foot(rel));
   return parts.join('\n');
 }
 
 /* ------------------------------------------------------------ gallery page */
+
+/* Shared between the gallery and the case study pages so a video is defined
+   once, in data.gallery, and both places stay in step. */
+
+const videoCard = (g, rel, { filterable = false } = {}) => `
+      <button class="card video-card reveal" type="button"${filterable ? ` data-category="${attr(g.category)}"` : ''} data-video="${attr(g.videoUrl)}" data-title="${attr(g.title)}">
+        <div class="video-card__media">
+          <img src="${rel}${attr(g.thumbnail)}" width="640" height="360" alt="${attr(g.title)}" loading="lazy" decoding="async">
+          <span class="video-card__play"><i class="ri-play-fill" aria-hidden="true"></i></span>
+        </div>
+        <div class="video-card__body">
+          <h3>${esc(g.title)}</h3>
+          <span class="post__cat">${esc(g.category)}</span>
+        </div>
+      </button>`;
+
+const lightboxMarkup = () => `
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Video player">
+  <div class="lightbox__inner">
+    <div class="lightbox__bar">
+      <h3></h3>
+      <button class="lightbox__close" type="button" aria-label="Close video"><i class="ri-close-line"></i></button>
+    </div>
+    <div class="lightbox__frame"></div>
+    <p class="lightbox__fallback is-hidden">
+      Video not playing? <a href="#" target="_blank" rel="noopener noreferrer">Open it directly<i class="ri-external-link-line" aria-hidden="true"></i></a>
+    </p>
+  </div>
+</div>`;
+
+/** Resolve a detail page's `videos` (gallery ids) to gallery entries. */
+function videosFor(detail) {
+  if (!detail || !detail.videos) return [];
+  return detail.videos
+    .map((id) => {
+      const found = data.gallery.find((g) => g.id === id);
+      if (!found) throw new Error(`details.videos references unknown gallery id: ${id}`);
+      return found;
+    });
+}
 
 function buildGallery() {
   const rel = '../';
@@ -638,32 +692,11 @@ function buildGallery() {
       ${cats.map((c, i) => `<button class="filter${i === 0 ? ' is-active' : ''}" type="button" data-value="${attr(c)}" aria-pressed="${i === 0}">${esc(c)}</button>`).join('\n      ')}
     </div>
     <div class="grid-cards" id="gallery-grid">
-      ${data.gallery.map((g) => `
-      <button class="card video-card reveal" type="button" data-category="${attr(g.category)}" data-video="${attr(g.videoUrl)}" data-title="${attr(g.title)}">
-        <div class="video-card__media">
-          <img src="${rel}${attr(g.thumbnail)}" width="600" height="400" alt="${attr(g.title)}" loading="lazy" decoding="async">
-          <span class="video-card__play"><i class="ri-play-fill" aria-hidden="true"></i></span>
-        </div>
-        <div class="video-card__body">
-          <h3>${esc(g.title)}</h3>
-          <span class="post__cat">${esc(g.category)}</span>
-        </div>
-      </button>`).join('')}
+      ${data.gallery.map((g) => videoCard(g, rel, { filterable: true })).join('')}
     </div>
   </section>
 </main>
-<div class="lightbox" role="dialog" aria-modal="true" aria-label="Video player">
-  <div class="lightbox__inner">
-    <div class="lightbox__bar">
-      <h3></h3>
-      <button class="lightbox__close" type="button" aria-label="Close video"><i class="ri-close-line"></i></button>
-    </div>
-    <div class="lightbox__frame"></div>
-    <p class="lightbox__fallback is-hidden">
-      Video not playing? <a href="#" target="_blank" rel="noopener noreferrer">Open it directly<i class="ri-external-link-line" aria-hidden="true"></i></a>
-    </p>
-  </div>
-</div>`,
+${lightboxMarkup()}`,
     footer(rel, false),
     foot(rel),
   ].join('\n');

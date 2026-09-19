@@ -734,6 +734,12 @@ ul { margin: 0; padding: 0; list-style: none; }
 @media (min-width: 768px) { .shots { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .shots img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--card-border); }
 
+.cs-demos { margin-bottom: 3rem; }
+.cs-demos .col-title { font-size: 1.5rem; margin-bottom: 1.5rem; }
+/* Demos are a short row, not a full grid — keep cards from stretching wide. */
+.grid-cards--demos { grid-template-columns: 1fr; }
+@media (min-width: 640px) { .grid-cards--demos { grid-template-columns: repeat(auto-fit, minmax(18rem, 22rem)); } }
+
 .cs-blocks { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
 @media (min-width: 1024px) { .cs-blocks { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .cs-block { padding: 2rem; }

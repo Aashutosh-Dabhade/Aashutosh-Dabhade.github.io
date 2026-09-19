@@ -250,6 +250,9 @@
       "images": [
         "assets/img/ai-banking-kiosk.webp",
         "assets/img/genai-gallery.webp"
+      ],
+      "videos": [
+        "genai-kiosk"
       ]
     },
     "ayodhya-metaverse": {
@@ -285,6 +288,9 @@
       "images": [
         "assets/img/ayodhya-1.webp",
         "assets/img/ayodhya-2.webp"
+      ],
+      "videos": [
+        "ayodhya"
       ]
     },
     "absa-absaverse": {
@@ -319,6 +325,10 @@
       "images": [
         "assets/img/absa-1.webp",
         "assets/img/absa-2.webp"
+      ],
+      "videos": [
+        "absa-1",
+        "absa-2"
       ]
     },
     "sbi-life-training": {
@@ -351,6 +361,9 @@
       "images": [
         "assets/img/sbi-life-training.webp",
         "assets/img/sbi-gallery.webp"
+      ],
+      "videos": [
+        "sbi-life"
       ]
     },
     "virtual-darshan": {
@@ -410,6 +423,9 @@
       "images": [
         "assets/img/ongc-safety.webp",
         "assets/img/ongc-gallery.webp"
+      ],
+      "videos": [
+        "ongc-safety"
       ]
     }
   },

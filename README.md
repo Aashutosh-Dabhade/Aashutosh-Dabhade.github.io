@@ -69,6 +69,25 @@ Whatever the source, the lightbox shows an **"Open it directly"** link beneath
 the player, so a failed embed still leaves the visitor a working route to the
 video.
 
+### Putting a demo on a case study page
+
+A case study shows a **Project Demo** row when its entry in `details` lists
+gallery ids in `videos`:
+
+```json
+"absa-absaverse": { "videos": ["absa-1", "absa-2"] }
+```
+
+Videos are referenced by id, never by URL, so each one is defined once in
+`gallery` and the case study page follows automatically. An id that matches no
+gallery entry fails the build rather than rendering a dead card. Omit `videos`
+(as `virtual-darshan` does) and the section and its player are left out
+entirely.
+
+Five of the six case studies have a demo. `virtual-darshan` has no recording,
+and `archviz`, `multiplayer-cafe`, `mobile-metaverse`, `virtual-office` and
+`bharat-petroleum` live in the gallery without a case study page of their own.
+
 ## Contact form
 
 `site.formEndpoint` is empty by default, so the form falls back to opening the
