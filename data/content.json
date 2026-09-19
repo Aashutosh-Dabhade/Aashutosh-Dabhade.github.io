@@ -637,78 +637,78 @@
       "id": "absa-1",
       "title": "ABSA Metaverse Experience - Part 1",
       "category": "Metaverse",
-      "thumbnail": "assets/img/absa-gallery-1.webp",
-      "videoUrl": "https://drive.google.com/file/d/1dd-OgjvzpsW929H4l1K13ui_VWODWh18/view"
+      "thumbnail": "assets/img/yt-absa-1.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=Ej-k0KhGnK4"
     },
     {
       "id": "absa-2",
       "title": "ABSA Metaverse Experience - Part 2",
       "category": "Metaverse",
-      "thumbnail": "assets/img/absa-gallery-2.webp",
-      "videoUrl": "https://drive.google.com/file/d/1YH7MH7vDiUYJU8mzesMhRDO87h9CjTvx/view"
+      "thumbnail": "assets/img/yt-absa-2.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=nEKo6sEbBz0"
     },
     {
       "id": "ongc-safety",
       "title": "ONGC VR Safety Training",
       "category": "Enterprise Training",
-      "thumbnail": "assets/img/ongc-gallery.webp",
-      "videoUrl": "https://drive.google.com/file/d/1qxGomyZrExzQu1R0NAqeTKOGiH1Bb92U/view"
+      "thumbnail": "assets/img/yt-ongc-safety.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=fti_ByhvSNc"
     },
     {
       "id": "sbi-life",
       "title": "SBI Life – Virtual Training Platform",
       "category": "Enterprise Training",
-      "thumbnail": "assets/img/sbi-gallery.webp",
-      "videoUrl": "https://drive.google.com/file/d/1-38VPtpJrczlGF-RRLPeYYoCiaDO9oge/view"
+      "thumbnail": "assets/img/yt-sbi-life.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=GEaf-Yv2D9U"
     },
     {
       "id": "archviz",
       "title": "Archviz – Real Estate Visualization",
       "category": "Archviz",
-      "thumbnail": "assets/img/archviz-gallery.webp",
-      "videoUrl": "https://drive.google.com/file/d/1wJv7VTuWPRPYcdH9iBL0m1-zlPG6rpIk/view"
+      "thumbnail": "assets/img/yt-archviz.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=FSJX0A3GEQM"
     },
     {
       "id": "multiplayer-cafe",
       "title": "Virtual Multiplayer Café Zone",
       "category": "Multiplayer",
-      "thumbnail": "assets/img/cafe-gallery.webp",
-      "videoUrl": "https://drive.google.com/file/d/1rf9mJXXLT5OnsOW2a439xwVjQefGkr6f/view"
+      "thumbnail": "assets/img/yt-multiplayer-cafe.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=XMOyp9SsQmc"
     },
     {
       "id": "mobile-metaverse",
       "title": "Mobile Metaverse Platform",
       "category": "Metaverse",
-      "thumbnail": "assets/img/mobile-metaverse-gallery.webp",
-      "videoUrl": "https://drive.google.com/file/d/1tbRXxFTL7a9ADnymwRKrqimCnff_3DfM/view"
+      "thumbnail": "assets/img/yt-mobile-metaverse.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=uIvSNujhskw"
     },
     {
       "id": "virtual-office",
       "title": "Virtual Office Environment",
       "category": "Multiplayer",
-      "thumbnail": "assets/img/office-gallery.webp",
-      "videoUrl": "https://drive.google.com/file/d/1FKY5LRJ9jpcLhWxI0I89JBuc7KohOb7E/view"
+      "thumbnail": "assets/img/yt-virtual-office.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=aV7fCG_Gl-o"
     },
     {
       "id": "bharat-petroleum",
       "title": "Bharat Petroleum – Tonetag API Integration",
       "category": "Enterprise Training",
-      "thumbnail": "assets/img/bpcl-gallery.webp",
-      "videoUrl": "https://drive.google.com/file/d/1R1RvD1vyPIB2mGI6u58HyWyeJDzJpWxp/view"
+      "thumbnail": "assets/img/yt-bharat-petroleum.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=ExzpcaWCR10"
     },
     {
       "id": "genai-kiosk",
       "title": "GenAI Interactive Kiosk",
       "category": "AI",
-      "thumbnail": "assets/img/genai-gallery.webp",
-      "videoUrl": "https://drive.google.com/file/d/1aRgxnjepM5bx4vyi-Rhu4iLubqS66aon/view"
+      "thumbnail": "assets/img/yt-genai-kiosk.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=Di9LQNP4oeQ"
     },
     {
       "id": "ayodhya",
       "title": "Ayodhya Metaverse Experience",
       "category": "Metaverse",
-      "thumbnail": "assets/img/ayodhya-gallery.webp",
-      "videoUrl": "https://drive.google.com/file/d/1_f5Om4l4w1oFeT_Wtaa308CoNU0TfTjz/view"
+      "thumbnail": "assets/img/yt-ayodhya.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=zVBa8DbYC4w"
     }
   ],
   "achievements": [
