@@ -30,12 +30,15 @@ Almost everything lives in `data/content.json` — headline copy, stats, experti
 accordion, case studies, work history, skill percentages, blog cards, gallery
 videos and contact details. Change a value, run `npm run build`, done.
 
-Three things you should set before going live:
+`site.url` is set to `https://aashutosh-dabhade.github.io`, which drives the
+canonical tags, social-share previews and `sitemap.xml`. Change it if you move
+to your own domain.
 
-1. **`site.url`** — your real domain (e.g. `https://aashutoshdabhade.com`).
-   Setting it switches on `sitemap.xml`, `robots.txt` and canonical/OG tags.
-2. **`site.formEndpoint`** — see *Contact form* below.
-3. **Gallery videos** — the 11 Google Drive files must be shared as
+Two things still worth doing:
+
+1. **`site.formEndpoint`** — empty, so the contact form falls back to the
+   visitor's email client. See *Contact form* below.
+2. **Gallery videos** — the 11 Google Drive files must be shared as
    *Anyone with the link → Viewer*, or the embedded player shows a blank frame.
 
 ## Contact form
@@ -53,44 +56,56 @@ clunky. For real submissions, paste an endpoint from a free form service:
 The form already includes a `_gotcha` honeypot field that these services use for
 spam filtering.
 
-## Hosting
+## Hosting — this site runs on GitHub Pages
 
-The output is static files, so every option below serves it well. Ranked by what
-I'd actually pick:
+Live at **<https://aashutosh-dabhade.github.io>**, published from the
+`Aashutosh-Dabhade.github.io` repo by `.github/workflows/deploy.yml`.
 
-| Host | Cost | Custom domain | Notes |
-| --- | --- | --- | --- |
-| **Cloudflare Pages** | Free, unlimited bandwidth | Free, free SSL | Best free tier by a distance. 500 builds/month. Git push deploys. |
-| **Netlify** | Free (100 GB/mo) | Free, free SSL | Easiest UI; `netlify.toml` is already here. Form handling built in. |
-| **Vercel** | Free (100 GB/mo) | Free, free SSL | `vercel.json` is already here. Free tier is non-commercial. |
-| **GitHub Pages** | Free | Free, free SSL | Workflow in `.github/workflows/deploy.yml`. No server-side anything. |
+Push to `main` and it redeploys. Nothing to build or upload by hand:
 
-All four give you free HTTPS and deploy automatically when you push to `main`.
+```bash
+git add -A && git commit -m "Update content" && git push
+```
 
-**Domain cost is the only real expense.** A `.com` runs roughly ₹1,000–1,300
+One-time setup, if the repo is new: create it on GitHub as
+`Aashutosh-Dabhade.github.io` (public), push, then **Settings → Pages →
+Source: GitHub Actions**. First deploy takes about a minute.
+
+Note that GitHub Pages ignores `static/_headers`, so the caching and security
+headers in it do nothing here. They apply if you ever move to Netlify or
+Cloudflare Pages. Everything else works identically.
+
+### Moving to a custom domain later
+
+Three steps, about two minutes:
+
+1. Set `site.url` in `data/content.json` to `https://yourdomain.com` and commit.
+   That updates the canonical tags, OG image URLs and `sitemap.xml`.
+2. Add `yourdomain.com` under **Settings → Pages → Custom domain**. GitHub
+   writes a `CNAME` file into the repo for you.
+3. At your registrar, point the domain at GitHub:
+   - `www` → CNAME to `aashutosh-dabhade.github.io`
+   - apex (`yourdomain.com`) → four A records at `185.199.108.153`,
+     `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+     (confirm these against the values GitHub shows you — they do change)
+
+Tick **Enforce HTTPS** once the certificate provisions, usually within the hour.
+
+### Other hosts
+
+Configs for all of these are already in the repo if you ever switch — each
+auto-detects build `node build.mjs`, output `dist`.
+
+| Host | Cost | Notes |
+| --- | --- | --- |
+| **Cloudflare Pages** | Free, unlimited bandwidth | The one to move to if you outgrow Pages: private repos allowed, honours `_headers`. |
+| **Netlify** | Free (100 GB/mo) | `netlify.toml` is here. Form handling built in. |
+| **Vercel** | Free (100 GB/mo) | `vercel.json` is here. Free tier is non-commercial. |
+
+**A domain is the only real expense.** A `.com` runs roughly ₹1,000–1,300
 (~$12–15) per year at Cloudflare Registrar (sold at cost, no markup),
 Namecheap or Porkbun. `.dev` and `.io` cost more; `.in` is usually cheaper.
-So: **₹0 hosting + ~₹1,200/year for the domain.**
-
-### Deploying to Cloudflare Pages (recommended)
-
-1. Push this folder to a GitHub repo.
-2. Cloudflare dashboard → Workers & Pages → Create → Pages → Connect to Git.
-3. Build command `node build.mjs`, output directory `dist`.
-4. Custom domains → add your domain. If the domain is registered at Cloudflare
-   the DNS is wired up for you; otherwise point the nameservers there first.
-
-### Deploying to Netlify or Vercel
-
-Connect the repo — both auto-detect the config files in this folder. Add the
-domain under *Domain settings* / *Domains*, then set the registrar's records to
-what they show you.
-
-### Deploying to GitHub Pages
-
-Push to `main`, then repo *Settings → Pages → Source: GitHub Actions*. For a
-custom domain, add it under the same settings page and create a `CNAME` record
-at your registrar pointing to `<username>.github.io`.
+So: **₹0 hosting + ~₹1,200/year if and when you want your own domain.**
 
 ## Differences from the original
 
