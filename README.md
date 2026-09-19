@@ -38,8 +38,36 @@ Two things still worth doing:
 
 1. **`site.formEndpoint`** — empty, so the contact form falls back to the
    visitor's email client. See *Contact form* below.
-2. **Gallery videos** — the 11 Google Drive files must be shared as
-   *Anyone with the link → Viewer*, or the embedded player shows a blank frame.
+2. **Gallery videos** — the 11 Google Drive links do not play for visitors and
+   should be moved to YouTube. See *Gallery videos* below.
+
+## Gallery videos
+
+The gallery reads `gallery[].videoUrl` from `data/content.json`. The player
+accepts YouTube, Vimeo, a direct `.mp4`/`.webm` URL, or Google Drive.
+
+**Google Drive does not work for this.** The files are shared correctly
+(*Anyone with the link*), but Drive's own player returns *"Could not preview
+the file — There was a problem playing this video"* for signed-out visitors.
+It looks fine while you are logged in as the owner and fails for everyone else.
+That is Drive's streaming behaviour, not a site bug, and no sharing setting
+fixes it.
+
+**Use YouTube instead.** Upload each video as **Unlisted** — not indexed, not
+listed on your channel, playable by anyone with the link — and paste the watch
+URL into `videoUrl`:
+
+```json
+{ "id": "absa-1", "title": "…", "videoUrl": "https://www.youtube.com/watch?v=XXXXXXXXXXX" }
+```
+
+Nothing else changes; the player detects the host automatically. Vimeo and
+self-hosted MP4s work the same way, though a large MP4 committed to the repo
+counts against the 1 GB GitHub Pages limit.
+
+Whatever the source, the lightbox shows an **"Open it directly"** link beneath
+the player, so a failed embed still leaves the visitor a working route to the
+video.
 
 ## Contact form
 

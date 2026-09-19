@@ -187,28 +187,60 @@
     var titleEl = $('.lightbox__bar h3', lightbox);
     var lastFocus = null;
 
-    var embedFor = function (url) {
+    var fallback = $('.lightbox__fallback', lightbox);
+
+    // Returns {type, src}. A plain media file plays in a <video> element; a
+    // recognised host plays in its own iframe player.
+    var sourceFor = function (url) {
+      var yt = /(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([\w-]+)/.exec(url);
+      if (yt) return { type: 'frame', src: 'https://www.youtube.com/embed/' + yt[1] + '?autoplay=1&rel=0' };
+
+      var vimeo = /vimeo\.com\/(?:video\/)?(\d+)/.exec(url);
+      if (vimeo) return { type: 'frame', src: 'https://player.vimeo.com/video/' + vimeo[1] + '?autoplay=1' };
+
       var drive = /drive\.google\.com\/file\/d\/([^/]+)/.exec(url);
-      if (drive) return 'https://drive.google.com/file/d/' + drive[1] + '/preview';
-      var yt = /(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([\w-]+)/.exec(url);
-      if (yt) return 'https://www.youtube.com/embed/' + yt[1] + '?autoplay=1';
-      return url;
+      if (drive) return { type: 'frame', src: 'https://drive.google.com/file/d/' + drive[1] + '/preview' };
+
+      if (/\.(mp4|webm|ogv|mov)(\?|$)/i.test(url)) return { type: 'video', src: url };
+
+      return { type: 'frame', src: url };
     };
 
     var close = function () {
       lightbox.classList.remove('is-open');
       frame.innerHTML = '';
+      if (fallback) fallback.classList.add('is-hidden');
       document.body.style.overflow = '';
       if (lastFocus) lastFocus.focus();
     };
 
     $$('[data-video]').forEach(function (card) {
       card.addEventListener('click', function () {
+        var url = card.getAttribute('data-video');
+        var title = card.getAttribute('data-title') || 'Video';
+        var source = sourceFor(url);
+
         lastFocus = card;
-        titleEl.textContent = card.getAttribute('data-title') || '';
-        frame.innerHTML =
-          '<iframe src="' + embedFor(card.getAttribute('data-video')) + '" allow="autoplay; fullscreen" allowfullscreen title="' +
-          (card.getAttribute('data-title') || 'Video') + '"></iframe>';
+        titleEl.textContent = title;
+
+        if (source.type === 'video') {
+          frame.innerHTML =
+            '<video src="' + source.src + '" controls autoplay playsinline preload="metadata"></video>';
+        } else {
+          frame.innerHTML =
+            '<iframe src="' + source.src + '" allow="autoplay; fullscreen" allowfullscreen title="' +
+            title.replace(/"/g, '&quot;') + '"></iframe>';
+        }
+
+        // An embedded player can fail for reasons this page cannot see or fix
+        // (Google Drive in particular refuses to stream to signed-out
+        // visitors). Always offer the original link so nobody is stranded.
+        if (fallback) {
+          var link = $('a', fallback);
+          if (link) link.href = url;
+          fallback.classList.remove('is-hidden');
+        }
+
         lightbox.classList.add('is-open');
         document.body.style.overflow = 'hidden';
         $('.lightbox__close', lightbox).focus();

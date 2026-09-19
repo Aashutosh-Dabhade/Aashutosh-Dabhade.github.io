@@ -659,6 +659,9 @@ function buildGallery() {
       <button class="lightbox__close" type="button" aria-label="Close video"><i class="ri-close-line"></i></button>
     </div>
     <div class="lightbox__frame"></div>
+    <p class="lightbox__fallback is-hidden">
+      Video not playing? <a href="#" target="_blank" rel="noopener noreferrer">Open it directly<i class="ri-external-link-line" aria-hidden="true"></i></a>
+    </p>
   </div>
 </div>`,
     footer(rel, false),
