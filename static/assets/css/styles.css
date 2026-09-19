@@ -285,6 +285,12 @@ ul { margin: 0; padding: 0; list-style: none; }
   margin: 0;
 }
 
+.hero p.hero__intro--secondary {
+  font-size: 1.0625rem;
+  color: var(--gray-400);
+  margin-top: 1.25rem;
+}
+
 .hero__actions { display: flex; flex-wrap: wrap; gap: 1rem; }
 .hero__socials { display: flex; gap: 1.5rem; }
 
@@ -717,8 +723,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 .cs-head .sub { font-size: 1.25rem; color: var(--purple-300); margin: 0 0 1.5rem; }
 .cs-head .overview { font-size: 1.0625rem; color: var(--gray-300); max-width: 60rem; margin: 0; }
 
+/* auto-fit so a project with two known facts still fills the row evenly */
 .facts { display: grid; gap: 1.5rem; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-block: 3rem; }
-@media (min-width: 768px) { .facts { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 768px) { .facts { grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); } }
 .fact { padding: 1.5rem; text-align: center; }
 .fact span { display: block; color: var(--gray-500); font-size: 0.8125rem; margin-bottom: 0.35rem; }
 .fact strong { color: #fff; font-weight: 600; }

@@ -118,7 +118,7 @@ function footer(rel, onIndex) {
             <p>${esc(site.role)}</p>
           </div>
         </div>
-        <p class="footer__about">Crafting immersive experiences with Unity 3D, XR technologies, and multiplayer systems. Transforming visions into reality through cutting-edge development and innovative solutions.</p>
+        <p class="footer__about">${esc(data.copy.footerAbout)}</p>
         <div class="hero__socials">
           <a class="icon-btn" href="${attr(site.linkedin)}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
           <a class="icon-btn" href="${attr(site.github)}" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="ri-github-fill"></i></a>
@@ -164,6 +164,7 @@ function heroSection() {
           <h1><span class="gradient-text--hero">${esc(site.role)}</span></h1>
           <h2>${esc(site.tagline)}</h2>
           <p class="hero__intro">${esc(site.intro)}</p>
+          ${site.summaryExtra ? `<p class="hero__intro hero__intro--secondary">${esc(site.summaryExtra)}</p>` : ''}
         </div>
         <div class="hero__actions">
           <a class="btn btn--primary" href="${attr(site.resumeUrl)}" target="_blank" rel="noopener noreferrer">Download Resume</a>
@@ -210,7 +211,7 @@ function expertiseSection() {
   <div class="shell shell--narrow">
     <div class="section-head reveal">
       <h2><span class="gradient-text">Core Expertise</span></h2>
-      <p>Specialized technical domains where I deliver enterprise-grade solutions</p>
+      <p>${esc(data.copy.expertiseLead)}</p>
     </div>
     <div class="accordion">
       ${data.expertise.map((e, i) => `
@@ -245,7 +246,7 @@ function caseStudiesSection() {
   <div class="shell">
     <div class="section-head reveal">
       <h2><span class="gradient-text">Featured Case Studies</span></h2>
-      <p>Enterprise-grade XR solutions that transformed business operations and user experiences</p>
+      <p>${esc(data.copy.caseStudiesLead)}</p>
     </div>
     <div class="filters" data-filter-group="case-study-grid" role="group" aria-label="Filter case studies">
       ${cats.map((c, i) => `<button class="filter${i === 0 ? ' is-active' : ''}" type="button" data-value="${attr(c)}" aria-pressed="${i === 0}">${esc(c)}</button>`).join('\n      ')}
@@ -283,7 +284,7 @@ function experienceSection() {
   <div class="shell">
     <div class="section-head reveal">
       <h2><span class="gradient-text">Professional Journey</span></h2>
-      <p>A decade of innovation in XR technologies and enterprise solutions</p>
+      <p>${esc(data.copy.experienceLead)}</p>
     </div>
     <div class="two-col">
       <div class="reveal">
@@ -326,7 +327,7 @@ function skillsSection() {
   <div class="shell shell--narrow">
     <div class="section-head reveal">
       <h2><span class="gradient-text">Technical Skills</span></h2>
-      <p>Comprehensive expertise across the XR development ecosystem</p>
+      <p>${esc(data.copy.skillsLead)}</p>
     </div>
     <div class="filters" data-filter-group="skill-grid" role="group" aria-label="Filter skills">
       ${cats.map((c, i) => `<button class="filter${i === 0 ? ' is-active' : ''}" type="button" data-value="${attr(c)}" aria-pressed="${i === 0}">${esc(c)}</button>`).join('\n      ')}
@@ -394,12 +395,12 @@ function contactSection() {
   <div class="shell">
     <div class="section-head reveal">
       <h2><span class="gradient-text">Let's Build Immersive Experiences</span></h2>
-      <p>Ready to transform your vision into reality? Let's discuss your next XR project and create something extraordinary together.</p>
+      <p>${esc(data.copy.contactLead)}</p>
     </div>
     <div class="contact-grid">
       <div class="reveal">
         <h3 class="col-title">Get In Touch</h3>
-        <p class="contact-lead">Whether you're looking to build a metaverse platform, VR training solution, or multiplayer experience, I'm here to help bring your ideas to life with cutting-edge Unity and XR technologies.</p>
+        <p class="contact-lead">${esc(data.copy.contactBody)}</p>
         <div class="contact-list">
           <div class="contact-item">
             <span class="icon-btn"><i class="ri-mail-line" aria-hidden="true"></i></span>
@@ -538,38 +539,53 @@ function buildCaseStudy(card) {
   ];
 
   if (d) {
-    parts.push(`
+    // Render only what the source material supports. An empty list drops its
+    // whole block rather than leaving a heading that invites filler.
+    const facts = [
+      ['Role', d.role],
+      ['Client', d.client],
+      ['Duration', d.duration],
+      ['Team Size', d.teamSize],
+      ['Platforms', d.platforms],
+      ['Scale', d.scale],
+    ].filter(([, v]) => v);
+
+    const blocks = [
+      ['ri-building-line', 'Delivery Highlights', d.architecture],
+      ['ri-alert-line', 'Key Challenges', d.challenges],
+      ['ri-lightbulb-line', 'Innovative Solutions', d.solutions],
+      ['ri-line-chart-line', 'Outcomes &amp; Impact', d.outcomes],
+    ].filter(([, , list]) => list && list.length);
+
+    if (facts.length) {
+      parts.push(`
       <div class="facts">
-        <div class="card fact"><span>Duration</span><strong>${esc(d.duration)}</strong></div>
-        <div class="card fact"><span>Team Size</span><strong>${esc(d.teamSize)}</strong></div>
-        <div class="card fact"><span>Role</span><strong>${esc(d.role)}</strong></div>
-        <div class="card fact"><span>Client</span><strong>${esc(d.client)}</strong></div>
-      </div>
+        ${facts.map(([k, v]) => `<div class="card fact"><span>${esc(k)}</span><strong>${esc(v)}</strong></div>`).join('\n        ')}
+      </div>`);
+    }
+
+    if (d.images && d.images.length) {
+      parts.push(`
       <div class="shots">
         ${d.images.map((img, i) => `<img src="${rel}${attr(img)}" width="800" height="500" alt="${attr(card.title)} — screenshot ${i + 1}" loading="lazy" decoding="async">`).join('\n        ')}
-      </div>
+      </div>`);
+    }
+
+    parts.push(`
       <div class="card cs-block" style="margin-bottom:1.5rem;">
         <h3><i class="ri-stack-line" aria-hidden="true"></i>Technology Stack</h3>
         <ul class="tags">${d.techStack.map((t) => `<li class="tag">${esc(t)}</li>`).join('')}</ul>
-      </div>
-      <div class="cs-blocks">
-        <div class="card cs-block">
-          <h3><i class="ri-building-line" aria-hidden="true"></i>Architecture Highlights</h3>
-          <ul class="bullets">${d.architecture.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>
-        </div>
-        <div class="card cs-block">
-          <h3><i class="ri-alert-line" aria-hidden="true"></i>Key Challenges</h3>
-          <ul class="bullets">${d.challenges.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>
-        </div>
-        <div class="card cs-block">
-          <h3><i class="ri-lightbulb-line" aria-hidden="true"></i>Innovative Solutions</h3>
-          <ul class="bullets">${d.solutions.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>
-        </div>
-        <div class="card cs-block">
-          <h3><i class="ri-line-chart-line" aria-hidden="true"></i>Outcomes &amp; Impact</h3>
-          <ul class="bullets outcomes">${d.outcomes.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>
-        </div>
       </div>`);
+
+    if (blocks.length) {
+      parts.push(`
+      <div class="cs-blocks">
+        ${blocks.map(([icon, heading, list]) => `<div class="card cs-block">
+          <h3><i class="${icon}" aria-hidden="true"></i>${heading}</h3>
+          <ul class="bullets${heading.startsWith('Outcomes') ? ' outcomes' : ''}">${list.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>
+        </div>`).join('\n        ')}
+      </div>`);
+    }
   } else {
     // No long-form write-up authored yet — show what the card knows.
     parts.push(`

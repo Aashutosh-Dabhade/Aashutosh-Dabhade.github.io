@@ -2,12 +2,12 @@
   "site": {
     "name": "Aashutosh Dabhade",
     "initials": "AD",
-    "title": "Aashutosh Dabhade — Senior Unity & XR Developer | Metaverse & Multiplayer Architect",
-    "description": "Senior Unity & XR Developer with 7+ years building Metaverse platforms, FishNet multiplayer systems, WebGL applications and enterprise VR/AR simulations.",
+    "title": "Aashutosh Dabhade — Team Lead | Technical Lead | Solution Architect (Unity, XR, AI/GenAI)",
+    "description": "Team Lead and Solution Architect with 8+ years delivering Unity, XR and AI-powered enterprise platforms for banking, government, industrial safety and cultural heritage clients.",
     "url": "https://aashutosh-dabhade.github.io",
-    "role": "Senior Unity & XR Developer",
-    "tagline": "Metaverse & Multiplayer Architect",
-    "intro": "7+ years of experience crafting immersive Unity 3D experiences, XR solutions, Metaverse platforms, Multiplayer systems (FishNet), WebGL applications, VR/AR experiences, and enterprise simulations that push the boundaries of digital interaction.",
+    "role": "Team Lead & Solution Architect",
+    "tagline": "Unity & XR · AI / GenAI · Metaverse · Enterprise Applications",
+    "intro": "Team Lead and Technical Lead with 8+ years delivering Unity, XR and AI-powered enterprise applications, currently leading cross-functional teams of 5–12 across Unity, backend, AI/ML, UI/UX and 3D at Kiya.ai. I own solutions end to end — requirement analysis, solution architecture, development, team coordination, client demonstrations and deployment — and stay hands-on in the codebase throughout.",
     "photo": "assets/img/profile.jpg",
     "photoWebp": "assets/img/profile.webp",
     "resumeUrl": "https://drive.google.com/file/d/1JB66294M0zDspXdHxG7JO48JoidyDxhX/view?usp=sharing",
@@ -18,163 +18,188 @@
     "linkedinLabel": "linkedin.com/in/aashutosh-dabhade",
     "github": "https://github.com/Aashutosh-Dabhade",
     "githubLabel": "github.com/Aashutosh-Dabhade",
-    "formEndpoint": ""
+    "formEndpoint": "",
+    "summaryExtra": "Delivered large-scale platforms across banking, government, industrial safety, corporate training and cultural heritage, including an AI banking kiosk pairing GenAI avatars with live banking hardware, a 500-participant multiplayer training platform, and a 20-temple cultural metaverse shipped to WebGL, Android, iOS and VR."
   },
   "stats": [
     {
-      "n": 7,
+      "n": 8,
       "suffix": "+",
       "label": "Years of Experience"
     },
     {
-      "n": 50,
-      "suffix": "+",
-      "label": "Enterprise Projects"
-    },
-    {
-      "n": 2000,
-      "suffix": "+",
-      "label": "Concurrent Users"
-    },
-    {
-      "n": 8,
+      "n": 12,
       "suffix": "",
-      "label": "Platforms Supported"
+      "label": "Engineers Led"
+    },
+    {
+      "n": 500,
+      "suffix": "",
+      "label": "Concurrent Participants"
+    },
+    {
+      "n": 4,
+      "suffix": "",
+      "label": "Platforms Shipped"
     }
   ],
   "expertise": [
     {
       "id": 1,
-      "title": "Unity Architecture & Optimization",
-      "description": "Advanced Unity 3D development with focus on performance optimization, memory management, and scalable architecture patterns. Expert in DOTS, Job System, and custom rendering pipelines.",
+      "title": "Technical Leadership & Delivery",
+      "description": "Leading cross-functional teams of 5–12 across Unity, backend, AI/ML, UI/UX and 3D — owning technical direction from requirement analysis through deployment, with documentation aligned to CMMI Level 3 practices.",
       "technologies": [
-        "Unity 3D",
-        "C#",
-        "DOTS",
-        "Job System",
-        "Custom Shaders",
-        "Performance Profiling"
+        "Team Management",
+        "Solution Architecture",
+        "Requirement Analysis",
+        "Agile / Scrum",
+        "Sprint Planning & Estimation",
+        "Design & Code Reviews",
+        "CMMI Level 3"
       ]
     },
     {
       "id": 2,
-      "title": "Multiplayer Systems",
-      "description": "High-performance multiplayer networking solutions using FishNet, supporting thousands of concurrent users with optimized data synchronization and anti-cheat mechanisms.",
+      "title": "AI & GenAI Integration",
+      "description": "GenAI-powered conversational avatars with multilingual voice interaction, computer vision and agentic development workflows — including LLM coding agents driving the Unity Editor over MCP.",
       "technologies": [
-        "FishNet",
-        "Mirror",
-        "Photon",
-        "Custom Networking",
-        "Server Architecture",
-        "Load Balancing"
+        "GenAI & LLM Integration",
+        "Conversational AI",
+        "Azure Speech (STT/TTS)",
+        "MediaPipe",
+        "Prompt Engineering",
+        "Local LLM (Ollama)",
+        "RAG",
+        "Model Context Protocol"
       ]
     },
     {
       "id": 3,
-      "title": "XR & Metaverse Platforms",
-      "description": "End-to-end XR development for VR/AR/MR platforms, creating immersive metaverse experiences with spatial computing and cross-platform compatibility.",
+      "title": "Multiplayer & Real-Time Systems",
+      "description": "Concurrent-user architecture for enterprise metaverse and training platforms, including live sessions for up to 500 participants with server orchestration and real-time voice.",
       "technologies": [
-        "Oculus SDK",
-        "OpenXR",
-        "ARCore",
-        "ARKit",
-        "Varjo",
-        "HoloLens",
-        "WebXR"
+        "FishNet",
+        "PlayFlow",
+        "Photon",
+        "Agora",
+        "LiveKit",
+        "WebRTC",
+        "State Synchronization"
       ]
     },
     {
       "id": 4,
-      "title": "AI Avatars & Voice Integration",
-      "description": "Implementation of AI-powered avatars with natural language processing, voice recognition, and realistic facial animations for interactive virtual experiences.",
+      "title": "Unity Architecture & Optimization",
+      "description": "Unity architecture and reusable framework development across WebGL, Android, iOS, Windows and VR, with profiling and optimization to hold performance on every target from one codebase.",
       "technologies": [
-        "Ready Player Me",
-        "Azure Cognitive Services",
-        "Speech SDK",
-        "Facial Animation",
-        "NLP"
+        "Unity 3D",
+        "C#",
+        "URP",
+        "Addressables",
+        "Unity Profiler",
+        "Reusable Frameworks",
+        "Rapid Prototyping"
       ]
     },
     {
       "id": 5,
-      "title": "360° Video & Photogrammetry",
-      "description": "Advanced 360° video streaming, photogrammetry reconstruction, and volumetric capture integration for ultra-realistic virtual environments.",
+      "title": "XR & Metaverse Platforms",
+      "description": "End-to-end VR/AR/MR delivery across enterprise metaverse, cultural heritage and industrial safety training — from headset deployment to on-site VR booths operated by non-technical staff.",
       "technologies": [
+        "Meta Quest",
+        "HTC Vive",
+        "Pico",
+        "WebXR",
+        "Ready Player Me",
         "360° Video",
-        "Photogrammetry",
-        "Point Clouds",
-        "Volumetric Capture",
-        "Spatial Audio"
+        "Photogrammetry"
       ]
     },
     {
       "id": 6,
-      "title": "Enterprise Integrations",
-      "description": "Seamless integration with enterprise systems including Azure cloud services, REST APIs, hardware SDKs, and custom middleware solutions.",
+      "title": "Enterprise & Hardware Integration",
+      "description": "Backend, cloud and physical device integration for production banking deployments — REST APIs, role-based access, payment gateways, encryption and code obfuscation to meet banking security requirements.",
       "technologies": [
-        "Azure",
+        ".NET 8",
+        "SQL Server",
         "REST APIs",
-        "Hardware SDKs",
-        "Database Integration",
-        "Cloud Services",
-        "DevOps"
+        "Azure",
+        "AWS",
+        "Firebase",
+        "Jenkins CI/CD",
+        "Payment Gateways",
+        "Encryption & Obfuscation"
       ]
     }
   ],
   "caseStudies": [
     {
+      "id": "ai-banking-kiosk",
+      "title": "Digital Banking Unit (DBU)",
+      "category": "AI / GenAI",
+      "description": "AI-powered banking kiosk combining GenAI conversational avatars, multilingual voice interaction and physical banking hardware to run end-to-end customer journeys in branch.",
+      "image": "assets/img/ai-banking-kiosk.webp",
+      "technologies": [
+        "Unity 3D",
+        "GenAI Avatar",
+        "Azure Speech",
+        "Hardware Integration"
+      ],
+      "featured": true
+    },
+    {
       "id": "ayodhya-metaverse",
       "title": "Ayodhya Metaverse",
       "category": "Metaverse",
-      "description": "Immersive cultural metaverse experience showcasing the historic city of Ayodhya with photorealistic environments and interactive storytelling.",
+      "description": "Large-scale cultural metaverse recreating 20 iconic temples of Ayodhya as an immersive, multilingual public experience across WebGL, Android, iOS and VR.",
       "image": "assets/img/ayodhya-metaverse.webp",
       "technologies": [
         "Unity 3D",
-        "Metaverse",
-        "Photogrammetry",
-        "WebGL"
+        "WebGL",
+        "Ready Player Me",
+        "360° Video"
       ],
       "featured": true
     },
     {
       "id": "absa-absaverse",
-      "title": "ABSA Absaverse",
+      "title": "Absaverse",
       "category": "Metaverse",
-      "description": "Enterprise banking metaverse platform for ABSA Bank featuring virtual branches, customer service training, and financial education modules.",
+      "description": "Enterprise metaverse for Absa Bank covering collaboration, learning, wellness and events, designed for large-scale concurrent usage across WebGL and VR.",
       "image": "assets/img/absa-absaverse.webp",
       "technologies": [
-        "Unity 3D",
-        "Metaverse",
-        "Enterprise Integration",
-        "Azure"
+        "FishNet",
+        "PlayFlow",
+        "Agora",
+        "Enterprise Auth"
       ],
       "featured": true
     },
     {
       "id": "sbi-life-training",
       "title": "SBI Life Virtual Training",
-      "category": "WebGL",
-      "description": "Browser-based interactive training platform for SBI Life Insurance agents featuring scenario-based learning, product knowledge modules, and real-time performance analytics accessible from any device.",
+      "category": "Enterprise Training",
+      "description": "Enterprise virtual training platform hosting live sessions for up to 500 participants in a 3D auditorium, with webcam-based attention tracking and real-time engagement analytics.",
       "image": "assets/img/sbi-life-training.webp",
       "technologies": [
-        "Unity WebGL",
-        "Interactive Training",
-        "Analytics",
-        "LMS Integration"
+        "FishNet",
+        "PlayFlow",
+        "Attention Analytics",
+        "Agora"
       ],
       "featured": true
     },
     {
-      "id": "ai-banking-kiosk",
-      "title": "AI Banking Kiosk",
-      "category": "GenAi",
-      "description": "Interactive AI-powered banking kiosk with voice recognition, facial animation, and real-time customer service capabilities.",
-      "image": "assets/img/ai-banking-kiosk.webp",
+      "id": "virtual-darshan",
+      "title": "Virtual Darshan",
+      "category": "Enterprise Training",
+      "description": "Immersive virtual pilgrimage experiences for Vaishno Devi and Kashi Vishwanath, deployed through unattended on-site VR booths with UPI payments and centralized MIS.",
+      "image": "assets/img/virtual-darshan.webp",
       "technologies": [
         "Unity 3D",
-        "AI Integration",
-        "Voice SDK",
-        "Facial Animation"
+        "360° Video",
+        "Android Booth App",
+        "UPI Payments"
       ],
       "featured": false
     },
@@ -182,222 +207,251 @@
       "id": "ongc-vr-safety",
       "title": "ONGC VR Safety Training",
       "category": "VR Training",
-      "description": "Immersive VR safety training for oil rig operations with realistic hazard simulations and emergency response protocols.",
+      "description": "Industrial VR safety training across a 120-acre ONGC campus, including Helicopter Underwater Escape Training (HUET) and industrial fire safety simulations.",
       "image": "assets/img/ongc-safety.webp",
       "technologies": [
         "Unity 3D",
         "VR Safety",
-        "Industrial Simulation",
-        "Training Analytics"
-      ],
-      "featured": false
-    },
-    {
-      "id": "virtual-darshan",
-      "title": "Virtual Darshan Platform",
-      "category": "WebGL",
-      "description": "Web-based virtual temple visits with 360° video streaming, live ceremonies, and interactive spiritual experiences.",
-      "image": "assets/img/virtual-darshan.webp",
-      "technologies": [
-        "Unity WebGL",
-        "360° Video",
-        "Live Streaming",
-        "Spiritual Tech"
+        "HUET Simulation",
+        "Event-Driven Workflows"
       ],
       "featured": false
     }
   ],
   "details": {
+    "ai-banking-kiosk": {
+      "id": "ai-banking-kiosk",
+      "title": "Digital Banking Unit (DBU)",
+      "subtitle": "AI Banking Kiosk · GenAI Avatar · Unity + Hardware + Enterprise Backend",
+      "category": "AI / GenAI",
+      "overview": "AI-powered banking kiosk combining GenAI conversational avatars, multilingual voice interaction and physical banking hardware to run end-to-end customer journeys in branch.",
+      "role": "Team Lead / Solution Lead",
+      "client": "Kiya.ai",
+      "techStack": [
+        "Unity 3D",
+        "GenAI / LLM",
+        "Azure Speech STT/TTS",
+        "Model Context Protocol",
+        "REST APIs",
+        "Banking Hardware SDKs",
+        ".NET 8"
+      ],
+      "architecture": [
+        "Owned the Unity architecture and development across 3D avatar presentation, voice interaction, banking workflows and device control",
+        "Designed a backend-driven Customer Journey Configuration architecture, so onboarding, KYC, account services and loan journeys are defined as configuration and changed without a Unity release",
+        "Built GenAI-powered humanoid avatar interaction with Azure Speech STT/TTS and multilingual conversation, replacing form-driven screens with a guided banking assistant",
+        "Integrated fingerprint scanner, camera-based face detection, document scanner, signature pad and thermal printer into the Unity application and backend flow",
+        "Introduced agentic AI development into the team workflow — LLM coding agents driving the Unity Editor over MCP with verification in Play mode — shortening iteration on avatar, expression and lipsync systems",
+        "Coordinated Unity, AI/ML, backend, hardware and business teams across the complete customer journey"
+      ],
+      "challenges": [],
+      "solutions": [],
+      "outcomes": [],
+      "images": [
+        "assets/img/ai-banking-kiosk.webp",
+        "assets/img/genai-gallery.webp"
+      ]
+    },
     "ayodhya-metaverse": {
       "id": "ayodhya-metaverse",
       "title": "Ayodhya Metaverse",
-      "subtitle": "Cultural Heritage Digital Preservation",
+      "subtitle": "Cultural Metaverse · 20 Temples · WebGL, Android, iOS, VR",
       "category": "Metaverse",
-      "overview": "Created an immersive cultural metaverse experience showcasing the historic city of Ayodhya with photorealistic environments, interactive storytelling, and spiritual experiences. The platform allows users to explore ancient temples, participate in virtual ceremonies, and learn about cultural heritage through immersive narratives.",
-      "role": "Technical Lead & Senior Unity Developer",
+      "overview": "Large-scale cultural metaverse recreating 20 iconic temples of Ayodhya as an immersive, multilingual public experience across four platforms.",
+      "role": "Team Lead / Project Manager",
+      "client": "Ayodhya Development Authority",
+      "platforms": "WebGL, Android, iOS, VR",
+      "scale": "20 temple environments",
       "techStack": [
         "Unity 3D",
-        "Metaverse SDK",
-        "Photogrammetry",
         "WebGL",
-        "Azure Cloud",
-        "Spatial Audio",
-        "Custom Shaders"
+        "Ready Player Me",
+        "LOD & Environment Optimization",
+        "Authentication",
+        "Payments",
+        "360° Video"
       ],
       "architecture": [
-        "Modular scene management system for seamless world streaming",
-        "Custom LOD system for optimized performance across devices",
-        "Cloud-based user progression and social features",
-        "Real-time lighting and weather simulation",
-        "Spatial audio system for immersive soundscapes"
+        "Led development and cross-functional delivery as Project Manager and Team Lead, running Agile sprint planning, stakeholder communication and milestone commitments to a government authority",
+        "Delivered 20 temple environments across WebGL, Android, iOS and VR, applying LOD and environment optimization to hold performance on every target",
+        "Integrated Ready Player Me avatars, authentication, user activity tracking and payments",
+        "Delivered 360° virtual tours with multilingual narration, and contributed to scripting, narration and video production",
+        "Ran site reconnaissance and 360° content capture on location",
+        "Produced technical and project documentation aligned with CMMI Level 3 practices"
       ],
-      "challenges": [
-        "Rendering massive cultural environments while maintaining 60fps",
-        "Implementing cross-platform compatibility (VR, Mobile, Web)",
-        "Preserving cultural authenticity in digital recreation",
-        "Managing large-scale photogrammetry assets efficiently"
-      ],
-      "solutions": [
-        "Developed custom occlusion culling and LOD systems",
-        "Implemented progressive asset loading with smart caching",
-        "Collaborated with cultural experts for authentic representation",
-        "Created automated photogrammetry processing pipeline"
-      ],
-      "outcomes": [
-        "500K+ virtual visitors in first 6 months",
-        "95% user satisfaction rating",
-        "Featured in UNESCO digital heritage initiatives",
-        "40% reduction in cultural tourism carbon footprint"
-      ],
+      "challenges": [],
+      "solutions": [],
+      "outcomes": [],
       "images": [
         "assets/img/ayodhya-1.webp",
         "assets/img/ayodhya-2.webp"
-      ],
-      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      "duration": "8 months",
-      "teamSize": "12 developers",
-      "client": "Cultural Heritage Foundation"
+      ]
     },
     "absa-absaverse": {
       "id": "absa-absaverse",
-      "title": "ABSA Absaverse",
-      "subtitle": "Enterprise Banking Metaverse Platform",
+      "title": "Absaverse",
+      "subtitle": "Enterprise Metaverse · Multiplayer at Scale · WebGL & VR",
       "category": "Metaverse",
-      "overview": "Developed a comprehensive banking metaverse platform for ABSA Bank featuring virtual branches, customer service training modules, financial education experiences, and collaborative workspaces. The platform revolutionized employee training and customer engagement in the financial sector.",
-      "role": "Senior Unity Developer & XR Architect",
+      "overview": "Enterprise metaverse for collaboration, learning, wellness and events, designed for large-scale concurrent usage across WebGL and VR.",
+      "role": "Team Lead / Technical Lead",
+      "client": "Absa Bank, South Africa",
+      "platforms": "WebGL, VR",
       "techStack": [
-        "Unity 3D",
-        "Oculus SDK",
-        "Azure Integration",
-        "FishNet Multiplayer",
-        "Enterprise APIs",
-        "Voice Recognition",
-        "Analytics Dashboard"
+        "FishNet",
+        "PlayFlow",
+        "Agora Voice",
+        "Enterprise Authentication",
+        "Role-Based Access Control",
+        "REST APIs",
+        "Unity 3D"
       ],
       "architecture": [
-        "Scalable multiplayer architecture supporting 100+ concurrent users",
-        "Enterprise-grade security with Azure AD integration",
-        "Real-time analytics and performance tracking",
-        "Modular training content management system",
-        "Cross-platform VR compatibility (Oculus, HTC Vive, Varjo)"
+        "Architected the multiplayer layer on FishNet with PlayFlow server orchestration to support large-scale concurrent participation across zones",
+        "Integrated Agora voice so collaboration rooms, auditoriums and events work as live conversations rather than recorded content",
+        "Delivered enterprise authentication, role-based access control and REST API integration against the bank’s systems",
+        "Built a content management layer for PDF, PPT, video and image assets so the client’s learning and events teams publish material without an engineering release",
+        "Shipped virtual auditoriums, learning and collaboration rooms, wellness/meditation environments and event management workflows",
+        "Owned WebGL and VR deployment and the optimization needed to serve both from one codebase"
       ],
-      "challenges": [
-        "Integrating with legacy banking systems securely",
-        "Creating realistic customer interaction scenarios",
-        "Ensuring GDPR compliance in virtual environments",
-        "Optimizing for enterprise VR hardware deployment"
-      ],
-      "solutions": [
-        "Developed secure API gateway for banking system integration",
-        "Implemented AI-driven customer behavior simulation",
-        "Created comprehensive data privacy framework",
-        "Built automated VR hardware management system"
-      ],
-      "outcomes": [
-        "85% improvement in training effectiveness",
-        "60% reduction in onboarding time",
-        "92% employee satisfaction with VR training",
-        "Deployed across 50+ ABSA branches globally"
-      ],
+      "challenges": [],
+      "solutions": [],
+      "outcomes": [],
       "images": [
         "assets/img/absa-1.webp",
         "assets/img/absa-2.webp"
-      ],
-      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      "duration": "12 months",
-      "teamSize": "15 developers",
-      "client": "ABSA Bank"
+      ]
     },
     "sbi-life-training": {
       "id": "sbi-life-training",
       "title": "SBI Life Virtual Training",
-      "subtitle": "Insurance Agent WebGL Training Platform",
-      "category": "WebGL",
-      "overview": "Browser-based interactive training platform for SBI Life Insurance agents featuring scenario-based learning modules, comprehensive product knowledge systems, sales technique training, and real-time performance analytics. The platform delivers engaging training experiences accessible from any device without requiring VR hardware or downloads.",
-      "role": "Lead Unity Developer & WebGL Systems Architect",
+      "subtitle": "Enterprise Virtual Training · 500 Participants · Attention Analytics",
+      "category": "Enterprise Training",
+      "overview": "Enterprise virtual training platform hosting live sessions for up to 500 participants in a 3D auditorium, with real-time engagement measurement.",
+      "role": "Team Lead",
+      "client": "SBI Life",
+      "scale": "Up to 500 participants per session",
       "techStack": [
-        "Unity WebGL",
-        "Interactive Learning",
-        "Machine Learning",
-        "LMS Integration",
-        "Speech Recognition",
-        "Performance Analytics",
-        "Cloud Infrastructure"
+        "FishNet",
+        "PlayFlow",
+        "Webcam Attention Tracking",
+        "Agora Voice",
+        "Ready Player Me",
+        "Admin Portal Integration"
       ],
       "architecture": [
-        "Adaptive learning system with ML-driven personalization",
-        "Comprehensive performance tracking and analytics",
-        "Integration with existing LMS and HR systems",
-        "Multi-scenario training environment system",
-        "Real-time feedback and coaching mechanisms"
+        "Built the multiplayer architecture on FishNet with PlayFlow server infrastructure to support up to 500 participants in a single session",
+        "Implemented webcam-based attention tracking with engagement and analytics systems, giving trainers measurable audience data instead of assumed attendance",
+        "Delivered a real-time speaker dashboard with assessments, polls and Q&A run live during sessions",
+        "Integrated Agora voice communication and Ready Player Me avatars for personalized participation",
+        "Integrated the platform with a web-based administration portal so training operations are managed outside Unity"
       ],
-      "challenges": [
-        "Creating realistic customer interaction scenarios in browser",
-        "Measuring soft skills development through web-based training",
-        "Optimizing WebGL performance for low-bandwidth regions",
-        "Ensuring consistent training quality across diverse devices"
-      ],
-      "solutions": [
-        "Developed AI-powered customer persona system for browser",
-        "Implemented behavioral analysis and scoring algorithms",
-        "Created progressive loading and asset optimization pipeline",
-        "Built responsive design system for cross-device compatibility"
-      ],
-      "outcomes": [
-        "78% improvement in sales performance",
-        "90% reduction in training costs",
-        "95% agent engagement rate",
-        "Trained 10,000+ insurance agents nationwide"
-      ],
+      "challenges": [],
+      "solutions": [],
+      "outcomes": [],
       "images": [
         "assets/img/sbi-life-training.webp",
         "assets/img/sbi-gallery.webp"
+      ]
+    },
+    "virtual-darshan": {
+      "id": "virtual-darshan",
+      "title": "Virtual Darshan",
+      "subtitle": "On-Site VR Booths · Android Management App · Payments & MIS",
+      "category": "Enterprise Training",
+      "overview": "Immersive virtual pilgrimage experiences deployed through on-site VR booths at two of India’s most visited temples.",
+      "role": "Team Lead",
+      "client": "Vaishno Devi & Kashi Vishwanath",
+      "techStack": [
+        "Unity 3D",
+        "VR",
+        "360° Video",
+        "Android Booth Management App",
+        "UPI & Digital Payments",
+        "Centralized MIS"
       ],
-      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      "duration": "10 months",
-      "teamSize": "18 developers",
-      "client": "SBI Life Insurance"
+      "architecture": [
+        "Delivered high-fidelity temple environments together with 360° content and a documentary experience for a walk-up public audience",
+        "Built an Android booth-management application with secure token-based device activation, so non-technical temple staff operate booths without developer support",
+        "Integrated UPI and digital payment for booth access",
+        "Delivered centralized MIS for monitoring and reporting across booth locations",
+        "Coordinated with temple authorities and deployment teams through installation and go-live"
+      ],
+      "challenges": [],
+      "solutions": [],
+      "outcomes": [],
+      "images": [
+        "assets/img/virtual-darshan.webp"
+      ]
+    },
+    "ongc-vr-safety": {
+      "id": "ongc-vr-safety",
+      "title": "ONGC VR Safety Training",
+      "subtitle": "Industrial Safety Simulation · HUET · 120-Acre Campus",
+      "category": "VR Training",
+      "overview": "Industrial VR safety training covering a 120-acre ONGC campus, including two high-risk emergency simulations.",
+      "role": "Team Lead / VR Solution Lead",
+      "client": "ONGC",
+      "scale": "120-acre campus",
+      "techStack": [
+        "Unity 3D",
+        "VR",
+        "Physics & Animation",
+        "Event-Driven Training Workflows",
+        "Environmental Effects"
+      ],
+      "architecture": [
+        "Delivered Helicopter Underwater Escape Training (HUET) and industrial fire safety simulations — training that is hazardous and expensive to stage physically",
+        "Built interactive emergency scenarios on event-driven training workflows using physics, animation and environmental effects",
+        "Worked with ONGC safety experts and 3D teams to keep every scenario procedurally accurate"
+      ],
+      "challenges": [],
+      "solutions": [],
+      "outcomes": [],
+      "images": [
+        "assets/img/ongc-safety.webp",
+        "assets/img/ongc-gallery.webp"
+      ]
     }
   },
   "experience": [
     {
-      "title": "Team Lead / Senior Consultant – Unity & XR",
+      "title": "Team Lead / Senior Consultant",
       "company": "Kiya.ai, Mumbai",
       "period": "Jan 2021 – Present",
-      "description": "Leading end-to-end development of large-scale XR, Metaverse, and Multiplayer Unity platforms for banking, government, and enterprise clients.",
+      "description": "Technology and consulting firm delivering digital banking, metaverse and enterprise solutions to banks, government bodies and large enterprises.",
       "achievements": [
-        "Architecting multiplayer systems (FishNet) supporting 500–2000+ concurrent users across WebGL, Mobile, and VR",
-        "Managing and mentoring teams of 5–12 Unity developers, handling sprint planning, code reviews, technical decisions, and delivery timelines",
-        "Designing reusable Unity frameworks for avatars, networking, authentication, UI workflows, and backend-driven content systems",
-        "Integrating enterprise services including REST APIs, Azure Speech (STT/TTS), AI avatars, voice (Agora), analytics, and admin portals",
-        "Ensuring performance optimization, platform compliance, and production stability across Oculus, Android, iOS, Desktop, and WebGL",
-        "Collaborating closely with clients, product owners, and stakeholders to translate business needs into scalable technical solutions"
+        "Team leadership — Lead cross-functional teams of 5–12 engineers across Unity, backend, AI/ML, UI/UX and 3D, owning technical direction from requirement analysis through deployment",
+        "Solution architecture — Define architecture and implementation strategy for enterprise XR, metaverse and AI products, and build reusable frameworks that carry across projects instead of being rebuilt per client",
+        "Mentoring & quality — Run design discussions, technical reviews and developer mentoring; troubleshoot the complex Unity, VR, WebGL, networking and deployment issues escalated from the team",
+        "Client ownership — Manage client discussions, demonstrations and technical clarifications directly, translating business requirements into scoped engineering work with realistic estimates",
+        "Cross-functional delivery — Coordinate with backend, AI/ML, UI/UX, DevOps and business teams to ship integrated solutions rather than isolated Unity builds",
+        "Agile execution — Drive sprint planning, estimation, milestone tracking and stakeholder reporting, with documentation aligned to CMMI Level 3 practices"
       ],
       "type": "experience"
     },
     {
       "title": "Unity Developer",
-      "company": "Reality-BIT (formerly RS Signature Solutions Pvt Ltd), Pune",
+      "company": "RS Signature Solutions Pvt. Ltd. (Reality-BIT), Pune",
       "period": "Jul 2020 – Jan 2021",
-      "description": "Developed real estate architectural visualization projects using Unity for interactive walkthroughs and presentations.",
+      "description": "Architectural visualization and interactive real-estate experiences.",
       "achievements": [
-        "Created realistic interiors, lighting setups, materials, and camera animations for high-quality visual output",
-        "Implemented user navigation, scene transitions, and interaction logic for desktop and mobile builds",
-        "Optimized assets, lighting, and scenes to ensure smooth performance across target devices",
-        "Collaborated with designers and architects to convert CAD and 3D assets into real-time Unity experiences"
+        "Developed interactive architectural visualization applications and real-estate walkthroughs in Unity",
+        "Built virtual environments with production-quality interiors, lighting and materials",
+        "Implemented navigation, camera transitions and user interaction systems",
+        "Integrated CAD and 3D assets into Unity and optimized scenes for smooth real-time performance"
       ],
       "type": "experience"
     },
     {
-      "title": "Unity Developer (Solo Developer)",
+      "title": "Unity Developer / VR Developer",
       "company": "Armstrong Machine Builders Pvt. Ltd., Pune",
       "period": "May 2018 – Jul 2020",
-      "description": "Worked as a solo Unity developer building VR-based automation and industrial simulation solutions.",
+      "description": "Industrial VR, automation and training simulations.",
       "achievements": [
-        "Developed interactive VR simulations to visualize machine workflows, automation processes, and training scenarios",
-        "Implemented core Unity systems including scene management, animations, physics, UI, and interaction logic",
-        "Handled end-to-end development including asset integration, optimization, build generation, and VR device testing",
-        "Gained strong foundational experience in Unity architecture, C#, debugging, and performance optimization"
+        "Developed VR simulations and industrial training applications as the sole developer, owning the full lifecycle from scene build through testing and deployment",
+        "Converted machine and industrial workflows into interactive 3D experiences",
+        "Built Unity scenes, animation, physics, UI and interaction systems, and integrated 3D/CAD assets",
+        "Optimized applications for VR hardware and managed builds, debugging and release"
       ],
       "type": "experience"
     },
@@ -420,76 +474,100 @@
   ],
   "skills": [
     {
-      "name": "Unity 3D",
+      "name": "Unity 3D & URP",
       "percentage": 95,
       "icon": "ri-gamepad-line",
-      "category": "Core"
+      "category": "Unity & XR"
     },
     {
-      "name": "C# Programming",
+      "name": "C# / .NET 8",
       "percentage": 92,
       "icon": "ri-code-s-slash-line",
-      "category": "Core"
+      "category": "Languages & Backend"
     },
     {
-      "name": "XR SDKs (Oculus, OpenXR)",
+      "name": "Solution Architecture",
+      "percentage": 92,
+      "icon": "ri-building-line",
+      "category": "Leadership"
+    },
+    {
+      "name": "Team Leadership & Mentoring",
+      "percentage": 90,
+      "icon": "ri-team-line",
+      "category": "Leadership"
+    },
+    {
+      "name": "FishNet / PlayFlow Multiplayer",
+      "percentage": 90,
+      "icon": "ri-share-line",
+      "category": "Multiplayer"
+    },
+    {
+      "name": "XR SDKs (Quest, Vive, Pico)",
       "percentage": 90,
       "icon": "ri-vr-line",
-      "category": "XR"
-    },
-    {
-      "name": "FishNet Multiplayer",
-      "percentage": 88,
-      "icon": "ri-team-line",
-      "category": "Networking"
+      "category": "Unity & XR"
     },
     {
       "name": "WebGL Optimization",
-      "percentage": 85,
+      "percentage": 88,
       "icon": "ri-global-line",
-      "category": "Web"
+      "category": "Unity & XR"
     },
     {
-      "name": "Blender 3D Modeling",
-      "percentage": 80,
-      "icon": "ri-3d-view",
-      "category": "Content"
+      "name": "GenAI & LLM Integration",
+      "percentage": 88,
+      "icon": "ri-robot-line",
+      "category": "AI & GenAI"
     },
     {
-      "name": "Ready Player Me",
-      "percentage": 85,
-      "icon": "ri-user-3-line",
-      "category": "Avatars"
-    },
-    {
-      "name": "Git Version Control",
-      "percentage": 90,
-      "icon": "ri-git-branch-line",
-      "category": "Tools"
-    },
-    {
-      "name": "Azure Cloud Services",
-      "percentage": 82,
-      "icon": "ri-cloud-line",
-      "category": "Cloud"
+      "name": "Azure Speech (STT / TTS)",
+      "percentage": 88,
+      "icon": "ri-mic-line",
+      "category": "AI & GenAI"
     },
     {
       "name": "Performance Profiling",
       "percentage": 88,
       "icon": "ri-speed-line",
-      "category": "Optimization"
+      "category": "Unity & XR"
     },
     {
-      "name": "Shader Programming",
+      "name": "REST API & Backend Integration",
+      "percentage": 86,
+      "icon": "ri-server-line",
+      "category": "Languages & Backend"
+    },
+    {
+      "name": "Agora / LiveKit / WebRTC",
       "percentage": 85,
-      "icon": "ri-palette-line",
-      "category": "Graphics"
+      "icon": "ri-wifi-line",
+      "category": "Multiplayer"
     },
     {
-      "name": "AI Integration",
-      "percentage": 78,
-      "icon": "ri-robot-line",
-      "category": "AI"
+      "name": "Jenkins CI/CD & Git",
+      "percentage": 85,
+      "icon": "ri-git-branch-line",
+      "category": "Cloud & DevOps"
+    },
+    {
+      "name": "Hardware Integration",
+      "percentage": 85,
+      "icon": "ri-cpu-line",
+      "category": "Languages & Backend"
+    },
+    {
+      "name": "Azure / AWS / Firebase",
+      "percentage": 82,
+      "icon": "ri-cloud-line",
+      "category": "Cloud & DevOps"
+    },
+    {
+      "name": "Blender / Maya / Substance",
+      "percentage": 80,
+      "icon": "ri-shape-line",
+      "category": "3D & Content"
     }
   ],
   "blog": [
@@ -636,41 +714,51 @@
   "achievements": [
     {
       "icon": "ri-award-line",
-      "title": "Certifications",
+      "title": "Certifications & Achievements",
       "items": [
-        "Winner – Autodesk Fusion 360 National Design Competition (Oct & Dec 2016)",
-        "Autodesk Student Expert Alumni"
-      ]
-    },
-    {
-      "icon": "ri-book-open-line",
-      "title": "Continuous Learning",
-      "items": [
-        "Staying updated with latest XR technologies, AI integration, and Unity features"
+        "Winner — Autodesk Fusion 360 National Design Competition (October & December 2016)",
+        "Autodesk Student Expert — Alumni"
       ]
     },
     {
       "icon": "ri-team-line",
-      "title": "Mentorship",
+      "title": "Leadership",
       "items": [
-        "Mentored 15+ developers in Unity and XR technologies over the past 3 years"
+        "Leading cross-functional teams of 5–12 engineers across Unity, backend, AI/ML, UI/UX and 3D"
+      ]
+    },
+    {
+      "icon": "ri-shield-check-line",
+      "title": "Process",
+      "items": [
+        "Delivery and documentation aligned to CMMI Level 3 practices, with Agile sprint planning and estimation"
       ]
     }
   ],
   "services": [
-    "Unity 3D Development",
-    "VR/AR Solutions",
+    "Unity & XR Development",
+    "AI / GenAI Integration",
     "Metaverse Platforms",
     "Multiplayer Systems",
-    "WebGL Applications",
-    "Enterprise Integration"
+    "Enterprise Integration",
+    "Solution Architecture"
   ],
   "specializing": [
-    "Unity 3D Development",
-    "VR/AR/MR Solutions",
+    "Technical Leadership",
+    "Solution Architecture",
+    "Unity & XR Development",
+    "AI / GenAI & Conversational Avatars",
     "Metaverse Platforms",
-    "Multiplayer Systems",
-    "WebGL Applications",
-    "Enterprise Integrations"
-  ]
+    "Multiplayer & Real-Time Systems",
+    "Enterprise & Hardware Integration"
+  ],
+  "copy": {
+    "footerAbout": "Leading cross-functional teams to deliver Unity, XR and AI-powered enterprise platforms — from solution architecture through client demonstration and deployment, staying hands-on in the codebase throughout.",
+    "expertiseLead": "Where I lead delivery and stay hands-on",
+    "caseStudiesLead": "Platforms delivered across banking, government, industrial safety, corporate training and cultural heritage",
+    "experienceLead": "Eight years from solo VR developer to technical lead and solution architect",
+    "skillsLead": "Leadership, Unity and XR, AI/GenAI, multiplayer and enterprise integration",
+    "contactLead": "Looking for someone to own a Unity, XR or AI-powered platform end to end? Let's talk about what you're building.",
+    "contactBody": "Whether it is an enterprise metaverse, a GenAI-driven product, a multiplayer training platform or an industrial VR simulation, I can take it from requirement analysis and architecture through to a deployed, supported release."
+  }
 }
